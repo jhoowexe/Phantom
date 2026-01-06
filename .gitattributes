@@ -1,0 +1,34 @@
+# ===== Normalização de fim de linha =====
+# Força LF no repositório (evita bagunça entre Windows/Linux)
+* text=auto eol=lf
+
+# Scripts sempre LF
+*.sh text eol=lf
+
+# ===== Arquivos "texto" comuns =====
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# ===== Binários (não tente normalizar / diff) =====
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.7z binary
+*.tar binary
+*.gz binary
+*.tgz binary
+
+# ===== Evitar diff inútil em pacotes/artefatos =====
+*.tar.gz -diff
+*.tgz -diff
+*.zip -diff
+
+# ===== (Opcional) Linguist / GitHub =====
+# Se quiser que o GitHub detecte como Shell majoritariamente
+*.sh linguist-language=Shell
