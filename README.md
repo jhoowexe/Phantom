@@ -74,3 +74,53 @@ A ferramenta pode checar dependências automaticamente, mas em ambientes Debian/
 ```bash
 sudo apt update
 sudo apt install -y python3 sqlite3 curl
+```
+## Uso
+
+A coleta geralmente exige privilégios administrativos para ler alguns logs e informações do sistema.
+
+### Ajuda / flags disponíveis
+
+```bash
+sudo ./phantom.sh --help
+Exemplo de coleta local (modo recomendado para DFIR)
+```
+```bash
+
+sudo ./phantom.sh --i-have-legal-authorization --output ./phantom-output
+Boas práticas: registre o caso, data/hora, hashes, responsável, e mantenha cadeia de custódia (quem coletou, onde armazenou, quem acessou).
+```
+
+## Saída e integridade
+Sugestão de estrutura de saída:
+
+```bash
+
+phantom-output/
+  case.json
+  commands.log
+  system/
+  users/
+  network/
+  logs/
+  browsers/   (quando habilitado e autorizado)
+  hashes.txt
+  phantom-collection.tar.gz
+commands.log: lista comandos executados e erros (se houver).
+```
+## hashes.txt: hash do pacote final e, opcionalmente, hashes por diretório/arquivo.
+
+## Disclaimer
+Este projeto foi desenvolvido para Educação, Pesquisa de Segurança, DFIR e triagem forense autorizada.
+
+ Use apenas em sistemas que você possui ou onde exista permissão explícita e legal.
+
+ Respeite leis locais, políticas internas e requisitos de cadeia de custódia.
+
+ É proibido usar para invadir, ocultar rastros, exfiltrar dados sem autorização ou prejudicar terceiros.
+
+O autor não se responsabiliza por uso indevido.
+
+Tags (tópicos)
+bash forensics dfir incident-response triage linux digital-forensics evidence-collection opsec
+
