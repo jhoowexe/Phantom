@@ -1,0 +1,50 @@
+# ==========================
+# Saídas de Execução (Evidências)
+# ==========================
+# Ignora pastas criadas pelo script (padrões de nome usados no código)
+triage_disk_*
+triage_phantom_*
+triage_elite_*
+triage_plus_*
+triage_*
+
+# ==========================
+# Arquivos de Exfiltração
+# ==========================
+# Ignora arquivos compactados gerados para envio
+*.tar.gz
+*.zip
+*.7z
+
+# ==========================
+# Artefatos Temporários
+# ==========================
+# O script Python é gerado dinamicamente via heredoc ("cat > extract.py")
+# Se a execução falhar antes de deletar, não queremos isso no repo.
+extract.py
+/tmp/
+temp/
+
+# ==========================
+# Relatórios e Logs Soltos
+# ==========================
+# Caso você rode o script e ele gere arquivos na raiz por acidente
+report.txt
+supertimeline.csv
+*.log
+hashes.txt
+
+# ==========================
+# Sistema Operacional e IDEs
+# ==========================
+# Mac
+.DS_Store
+
+# Linux
+*~
+.fuse_hidden*
+
+# Editores (VS Code, JetBrains, etc)
+.vscode/
+.idea/
+*.swp
