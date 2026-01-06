@@ -6,7 +6,7 @@
  | |    | | | | (_| | | | | || (_) | | | | | |  
  |_|    |_| |_|\__,_|_| |_|\__\___/|_| |_| |_|  
                                                 
-        :: Phantom Elite v4.5 ::
+        :: Phantom Elite v1.0 ::
 ```
 
 # Phantom — Linux Triage Toolkit (IR & Forensics)
