@@ -1,0 +1,1 @@
+nc -lvp 4444 > evidencia_alvo.tar.gz
